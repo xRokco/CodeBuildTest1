@@ -1,8 +1,12 @@
 version: 0.2
+env:
+  variables:
+    test: "buildspec"
 phases:
   install:
     commands:
       - echo Hello Team
+      - echo $test
   pre_build:
     commands:
       - echo $CODEBUILD_SOURCE_VERSION
