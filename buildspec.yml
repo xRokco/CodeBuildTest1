@@ -1,14 +1,14 @@
 version: 0.2
+env:
+  variables:
+    test: "buildspec"
 phases:
   install:
-    commands:
-      - echo This is new
+    runtime:
+      python: 3.7
   pre_build:
     commands:
-      - printenv
-      - echo $CODEBUILD_SOURCE_VERSION
-      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
-      - echo $CODEBUILD_WEBHOOK_TRIGGER
+      - curl checkip.amazonaws.com
 artifacts:
   files:
     - "**/*"
