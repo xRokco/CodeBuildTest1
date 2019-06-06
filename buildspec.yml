@@ -3,6 +3,9 @@ env:
   variables:
     test: "buildspec"
 phases:
+  install:
+    runtime:
+      python: 3.7
   pre_build:
     commands:
       - curl checkip.amazonaws.com
