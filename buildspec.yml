@@ -5,4 +5,5 @@ phases:
     runtime-versions:
       nodejs: 8
     commands:
-      - which n
+      - ls -al /usr/local/bin/n 
+      - n --version
